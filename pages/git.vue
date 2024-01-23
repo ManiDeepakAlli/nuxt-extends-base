@@ -28,7 +28,7 @@ export default {
           name: 'Product 1',
           description: 'Description for Product 1',
           price: 19.99,
-          image: 'path/to/product1-image.jpg',
+          image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
         },
         {
           id: 2,
