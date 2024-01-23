@@ -1,5 +1,6 @@
 <!-- MainComponent.vue -->
 <template>
+  <div>  
     <header-component title="Ecommerce Store" />
     <div class="home">
       <h2>Welcome to Our Ecommerce Store</h2>
