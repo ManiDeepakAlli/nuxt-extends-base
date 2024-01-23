@@ -1,15 +1,18 @@
 <!-- MainComponent.vue -->
 <template>
-  <div class="home">
-    <h1>Welcome to Our Ecommerce Store</h1>
-    <div class="product-list">
-      <product-card
-        v-for="product in products"
-        :key="product.id"
-        :product="product"
-        :add-to-cart="addToCart"
-      />
+    <header-component title="Ecommerce Store" />
+    <div class="home">
+      <h2>Welcome to Our Ecommerce Store</h2>
+      <div class="product-list">
+        <product-card
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+          :add-to-cart="addToCart"
+        />
+      </div>
     </div>
+    <footer-component />
   </div>
 </template>
 
