@@ -35,7 +35,7 @@ export default {
           name: 'Product 2',
           description: 'Description for Product 2',
           price: 29.99,
-          image: 'path/to/product2-image.jpg',
+          image: 'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
         },
         // Add more products as needed
       ],
