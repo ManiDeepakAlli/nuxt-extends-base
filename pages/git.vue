@@ -22,7 +22,7 @@
 import ProductCard from "@/components/ProductCard.vue";
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
-
+import AISuggestComponent from '@/components/AISuggestComponent.vue';
 export default {
   components: {
     ProductCard,
