@@ -1,12 +1,10 @@
-<!-- AISuggestComponent.vue -->
+<!-- DummyAIComponent.vue -->
 <template>
-  <div class="ai-suggest">
-    <h3>Suggested Recommendations</h3>
-    <ul>
-      <li v-for="suggestion in suggestions" :key="suggestion.id">
-        {{ suggestion.text }}
-      </li>
-    </ul>
+  <div class="dummy-ai">
+    <input v-model="userInput" @input="updateSuggestions" placeholder="Type your query..." />
+    <div v-if="aiResponse" class="ai-response">
+      <p>{{ aiResponse }}</p>
+    </div>
   </div>
 </template>
 
@@ -14,32 +12,37 @@
 export default {
   data() {
     return {
-      suggestions: [
-        { id: 1, text: "Try our new arrivals for the latest trends." },
-        { id: 2, text: "Customers who bought this also liked these products." },
-        { id: 3, text: "Explore related categories for more options." },
-        // Add more suggestions as needed
-      ],
+      userInput: '',
+      aiResponse: null,
     };
+  },
+  methods: {
+    updateSuggestions() {
+      // Simulate AI response based on user input
+      // In a real scenario, you would make an API call to an AI service
+      this.aiResponse = this.userInput
+        ? `AI suggests: "${this.userInput}" is a great choice!`
+        : null;
+    },
   },
 };
 </script>
 
 <style scoped>
-.ai-suggest {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
+.dummy-ai {
   margin: 20px 0;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+input {
+  padding: 8px;
+  font-size: 14px;
 }
 
-li {
-  margin: 10px 0;
-  color: #555;
+.ai-response {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 </style>
