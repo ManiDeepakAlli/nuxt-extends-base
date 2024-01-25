@@ -11,8 +11,9 @@
           :product="product"
           :add-to-cart="addToCart"
         />
-         <ai-suggest-component />
+         
       </div>
+      <ai-suggest-component />
     </div>
     <footer-component />
   </div>
